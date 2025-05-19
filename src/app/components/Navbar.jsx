@@ -1,0 +1,68 @@
+"use client";
+
+import { useState } from "react";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Categories", href: "#categories" },
+    { label: "Contact", href: "#contact" },
+  ];
+
+  const handleClick = () => {
+    setIsOpen(false); // Close mobile menu after click
+  };
+
+  return (
+    <nav className="sticky top-0 z-50 bg-transparent backdrop-blur-md shadow-md">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-gray-800 cursor-default">
+          Shivam Marbles and Tiles Suppliers.
+        </h1>
+
+        {/* Hamburger for mobile */}
+        <button
+          className="md:hidden flex flex-col space-y-1.5"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={`h-0.5 w-6 bg-black transition-transform ${isOpen ? "rotate-45 translate-y-1.5" : ""}`} />
+          <span className={`h-0.5 w-6 bg-black transition-opacity ${isOpen ? "opacity-0" : ""}`} />
+          <span className={`h-0.5 w-6 bg-black transition-transform ${isOpen ? "-rotate-45 -translate-y-1.5" : ""}`} />
+        </button>
+
+        {/* Desktop menu */}
+        <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
+          {menuItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="hover:text-yellow-500 transition duration-300"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="md:hidden px-6 py-4 bg-white text-gray-700 font-medium space-y-4">
+          {menuItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={handleClick}
+              className="block hover:text-yellow-500 transition duration-300"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </nav>
+  );
+}
