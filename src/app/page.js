@@ -1,8 +1,6 @@
 import About from "./components/About";
 import Categories from "./components/Categories";
-import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
@@ -17,10 +15,6 @@ export default function Home() {
 
       <section id="categories">
         <Categories />
-      </section>
-
-      <section id="contact">
-        <Footer />
       </section>
     </>
   );
