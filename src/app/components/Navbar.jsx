@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -7,11 +7,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Categories", href: "#categories" },
-    { label: "Contact", href: "#contact" },
-    { label: "Collections", href: "#contact" },
+    { label: "Home", href: "/#home" },
+    { label: "About", href: "/#about" },
+    { label: "Categories", href: "/#categories" },
+    { label: "Collections", href: "/collections" },
   ];
 
   const handleClick = () => {
@@ -40,21 +39,33 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`h-0.5 w-6 bg-black transition-transform ${isOpen ? "rotate-45 translate-y-1.5" : ""}`} />
-          <span className={`h-0.5 w-6 bg-black transition-opacity ${isOpen ? "opacity-0" : ""}`} />
-          <span className={`h-0.5 w-6 bg-black transition-transform ${isOpen ? "-rotate-45 -translate-y-1.5" : ""}`} />
+          <span
+            className={`h-0.5 w-6 bg-black transition-transform ${
+              isOpen ? "rotate-45 translate-y-1.5" : ""
+            }`}
+          />
+          <span
+            className={`h-0.5 w-6 bg-black transition-opacity ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`h-0.5 w-6 bg-black transition-transform ${
+              isOpen ? "-rotate-45 -translate-y-1.5" : ""
+            }`}
+          />
         </button>
 
         {/* Desktop menu */}
         <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
           {menuItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
-              className="hover:text-yellow-500 transition duration-300"
+              className="relative cursor-pointer hover:text-yellow-300 transition-colors duration-300"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
