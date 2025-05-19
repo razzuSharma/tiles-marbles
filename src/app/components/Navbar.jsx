@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,7 @@ export default function Navbar() {
     { label: "About", href: "#about" },
     { label: "Categories", href: "#categories" },
     { label: "Contact", href: "#contact" },
+    { label: "Collections", href: "#contact" },
   ];
 
   const handleClick = () => {
@@ -19,9 +21,18 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-transparent backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-gray-800 cursor-default">
-          Shivam Marbles and Tiles Suppliers.
-        </h1>
+        <div className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Company Logo"
+            width={50}
+            height={50}
+            className="mr-2"
+          />
+          <h1 className="text-2xl font-bold text-gray-800 cursor-default">
+            Shivom Marbles and Tiles Suppliers.
+          </h1>
+        </div>
 
         {/* Hamburger for mobile */}
         <button
