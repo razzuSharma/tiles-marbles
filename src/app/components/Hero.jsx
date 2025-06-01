@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative h-screen w-full">
-      {/* Image fills parent */}
       <Image
         src="/hero-section.jpg"
         alt="Elegant interior with premium tiles"
@@ -12,7 +11,6 @@ export default function Hero() {
         className="object-cover"
         priority
       />
-      {/* Overlay */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white px-4">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
@@ -45,7 +43,6 @@ export default function Hero() {
                 Explore Collections
               </button>
             </Link>
-          
           </div>
         </div>
       </div>

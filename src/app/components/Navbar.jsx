@@ -29,7 +29,7 @@ export default function Navbar() {
             className="mr-2"
           />
           <h1 className="text-2xl font-bold text-gray-800 cursor-default">
-            Sibam Marbles and Tiles Suppliers.
+            Sibam Marble and Tiles Suppliers.
           </h1>
         </div>
 
