@@ -45,29 +45,7 @@ export default function Hero() {
                 Explore Collections
               </button>
             </Link>
-            {/* <Link href="/collections" passHref>
-    <button
-      className="
-        bg-gradient-to-r from-green-600 to-cyan-500
-        text-white
-        px-8 py-3
-        font-semibold
-        rounded-full
-        shadow-md
-        hover:shadow-lg
-        hover:scale-105
-        transition
-        duration-300
-        ease-in-out
-        focus:outline-none
-        focus:ring-4
-        focus:ring-cyan-300
-        min-w-[160px]
-      "
-    >
-      Visit Us
-    </button>
-  </Link> */}
+          
           </div>
         </div>
       </div>
