@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
         {/* Left: Copyright */}
         <div className="text-center md:text-left">
-          <p>© 2025 Sibam Marbles and Tiles Suppliers. All rights reserved.</p>
+          <p>© 2025 Sibam Marble and Tiles Suppliers. All rights reserved.</p>
           <p className="text-sm text-gray-400">Crafted with passion and precision.</p>
         </div>
 
