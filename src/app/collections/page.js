@@ -19,7 +19,7 @@ const collections = [
     title: "Textured Wall Tiles",
     description:
       "Modern wall tiles with subtle textures — ideal for feature walls and artistic interiors that truly stand out.",
-    image: "/collections/image-3.jpg",
+    image: "/collections/image-4.jpg",
   },
 ];
 
